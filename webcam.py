@@ -1,5 +1,16 @@
 # reference: https://colab.research.google.com/drive/1QnC7lV7oVFk5OZCm75fqbLAfD9qBy9bw?usp=sharing#scrollTo=09b_0FAnUa9y
 
+from IPython.display import display, Javascript, Image
+from google.colab.output import eval_js
+from google.colab.patches import cv2_imshow
+from base64 import b64decode, b64encode
+#import cv2
+import numpy as np
+import PIL
+import io
+import html
+import time
+
 # JavaScript to properly create our live video stream using our webcam as input
 def video_stream():
   js = Javascript('''
