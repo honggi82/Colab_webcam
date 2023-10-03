@@ -143,10 +143,9 @@ def VideoCapture():
 
   display(js)
 
-def VideoRead():
+def video_frame():
   js_reply = eval_js('stream_frame()')
-  img = js_to_image(js_reply["img"])
-  return js_reply, img
+  return js_reply
 
 # function to convert the JavaScript object into an OpenCV image
 def js_to_image(js_reply):
