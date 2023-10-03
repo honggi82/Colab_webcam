@@ -145,6 +145,8 @@ def VideoCapture():
 
 def VideoRead():
   js_reply = eval_js('stream_frame()')
+  if not js_reply:
+        break
   img = js_to_image(js_reply["img"])
   return img
 
